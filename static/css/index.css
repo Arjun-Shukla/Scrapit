@@ -1,0 +1,125 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #0B3D2E;
+  width: 97%;
+  height: 8.8rem;
+  z-index: 1;
+  position: relative;
+  left: 2.2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 2;
+  position: absolute;
+  right: 12rem;
+  width: 70%;
+  justify-content: flex-end;
+}
+
+.navbar ul li {
+  margin: 0rem 1rem;
+  font-size: 1.5rem;
+  flex-grow: 0;
+  flex-shrink: 1;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 1.5rem;
+  padding: 1.2rem 0rem;
+  transition: all 0.3s ease-in;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 1.2rem 2.4rem;
+  background: linear-gradient(90deg, #f0f0f0, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btnlogin a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  right: 4.5rem;
+  top: 2.8rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  width: 5%;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  transition: all 0.2s ease-in;
+}
+
+/* .btnlogin{
+    background-color: #E53935;
+} */
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.icon span {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
+  flex-grow: 0;
+  flex-shrink: 1;
+  position: relative;
+  left: 5rem;
+  background: linear-gradient(90deg, #f9d423, #0fba3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-0.6rem);
+  color: #31ad56;
+  text-shadow: 0 0 10px #36ac52, 0 0 20px #5dc167, 0 0 40px #3f9139;
+  transition: all 0.4s ease;
+  transform: scale(1.03);
+}
+
+.btnlogin a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #08dc48;
+  text-shadow: 0 0 10px #74de18, 0 0 20px #418e64, 0 0 40px #ffb6a6;
+  transition: all 0.4s ease;
+}
