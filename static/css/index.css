@@ -14,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #0B3D2E;
+  background-color: #0b3d2e;
   width: 97%;
   height: 8.8rem;
   z-index: 1;
@@ -65,7 +65,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   position: absolute;
-  right: 4.5rem;
+  right: 3rem;
   top: 2.8rem;
   cursor: pointer;
   color: white;
@@ -87,13 +87,30 @@ body {
     background-color: #E53935;
 } */
 
-.icon{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: url(../css/logomain\ copy.png);
+  position: absolute;
+  height:100% ;
+  width: 15%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size : 15rem 5.5rem ;
+  justify-content: center;
+  align-items: center;
+  left: 0rem;
+
 }
 
-.icon span {
+/* .icon img {
+  position: relative;
+  left: 2.6rem;
+  border-radius: 25rem;
+} */
+
+/* .icon span {
   display: flex;
   flex-wrap: wrap;
   color: white;
@@ -106,13 +123,16 @@ body {
   background: linear-gradient(90deg, #f9d423, #0fba3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .navbar li:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-0.6rem);
   color: #31ad56;
-  text-shadow: 0 0 10px #36ac52, 0 0 20px #5dc167, 0 0 40px #3f9139;
+  text-shadow:
+    0 0 10px #36ac52,
+    0 0 20px #5dc167,
+    0 0 40px #3f9139;
   transition: all 0.4s ease;
   transform: scale(1.03);
 }
@@ -120,6 +140,19 @@ body {
 .btnlogin a:hover {
   background: rgba(255, 255, 255, 0.2);
   color: #08dc48;
-  text-shadow: 0 0 10px #74de18, 0 0 20px #418e64, 0 0 40px #ffb6a6;
+  text-shadow:
+    0 0 10px #74de18,
+    0 0 20px #418e64,
+    0 0 40px #ffb6a6;
   transition: all 0.4s ease;
+}
+
+.hero{
+    background-image: url(../css/heroNew.png);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 125rem 60rem;
+    background-position: center center;
 }
