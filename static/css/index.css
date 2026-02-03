@@ -25,6 +25,21 @@ body {
   flex-grow: 0;
   flex-shrink: 1;
 }
+.icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: url("/static/css/logomain\ copy.png");
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 15rem 5.5rem;
+  justify-content: center;
+  align-items: center;
+  left: 0rem;
+}
 
 .navbar ul {
   list-style: none;
@@ -47,7 +62,7 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
   border-radius: 1.5rem;
-  padding: 1.2rem 0rem;
+  padding: 1.0rem 0rem;
   transition: all 0.3s ease-in;
 }
 
@@ -61,21 +76,25 @@ body {
 }
 
 .btnlogin a {
+
+}
+
+.btnlogin{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   position: absolute;
-  right: 3rem;
-  top: 2.8rem;
+  right: 2rem;
+  top: 2.4rem;
   cursor: pointer;
-  color: white;
+  color: rgb(255, 18, 18);
   font-size: 1.6rem;
   text-decoration: none;
   font-weight: bold;
   border: 1px solid white;
   padding: 0.8rem;
   border-radius: 1rem;
-  width: 5%;
+  width: 8%;
   justify-content: center;
   align-items: center;
   flex-grow: 0;
@@ -83,26 +102,6 @@ body {
   transition: all 0.2s ease-in;
 }
 
-/* .btnlogin{
-    background-color: #E53935;
-} */
-
-.icon {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background: url(../css/logomain\ copy.png);
-  position: absolute;
-  height:100% ;
-  width: 15%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size : 15rem 5.5rem ;
-  justify-content: center;
-  align-items: center;
-  left: 0rem;
-
-}
 
 /* .icon img {
   position: relative;
@@ -133,26 +132,110 @@ body {
     0 0 10px #36ac52,
     0 0 20px #5dc167,
     0 0 40px #3f9139;
-  transition: all 0.4s ease;
-  transform: scale(1.03);
-}
-
-.btnlogin a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #08dc48;
-  text-shadow:
+    transition: all 0.4s ease;
+    transform: scale(1.03);
+  }
+  
+  .btnlogin a:hover {
+    /* background: rgba(255, 255, 255, 0.2);
+    color: #08dc48;
+    text-shadow:
     0 0 10px #74de18,
     0 0 20px #418e64,
-    0 0 40px #ffb6a6;
-  transition: all 0.4s ease;
+    0 0 40px #ffb6a6; */
+    transition: all 0.4s ease;
+  }
+  .services {
+    position: relative;
+  }
+  
+  .services .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0b3d2e;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12); */
+    min-width: 150px;
+    padding: 10px 0;
+    z-index: 1003;
+  }
+  
+  .services:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .services .dropdown li {
+    list-style: none;
+    width: 80%;
+    text-align: left;
+  }
+  
+  .btnlogin .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #0b3d2e;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12); */
+    min-width: 140px;
+    padding: 8px 0;
+    z-index: 1003;
+  }
+  
+  .btnlogin:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .btnlogin .dropdown li {
+    list-style: none;
+    width: 85%;
+    text-align: left;
+  }
+  
+  .btnlogin .dropdown li a {
+    display: block;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .hero {
+    /* background-image: url('/static/css/heroNew.png'); */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
-.hero{
-    background-image: url(../css/heroNew.png);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 125rem 60rem;
-    background-position: center center;
+.hero img {
+  height: 100%;
+  width: 100%;
 }
+
+#container {
+  position: absolute;
+  top: 70rem;
+  left: 0rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  width: 100vw;
+}
+
+

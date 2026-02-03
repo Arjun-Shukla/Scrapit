@@ -7,6 +7,9 @@
     <title>Scrapit</title>
     <link rel="stylesheet" href="../static/css/index.css">
     <script src="/static/js/index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
@@ -18,21 +21,88 @@
                 </div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#card-container">Services</a></li>
+                    <li class="services">
+                        <a href="#container">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="training.html">Training</a></li>
+                        </ul>
+                    </li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="#contact-container">Contact Us</a></li>
+                    
                 </ul>
                 <div class="btnlogin">
-                    <a href="userlogin.html">Login</a>
+                    <a href="#">Login 🔑</a>
+                    <ul class="dropdown">
+                        <li><a href="userlogin.html"><i class="fa-solid fa-user"></i>Customer</a></li>
+                        <li><a href="/agentlogin/"><i class="fa-solid fa-user-tie"></i>Dealer</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section>
+    <section id="hero section">
         <div class="hero">
-            
+            <img src="/static/css/heroNew.png" alt="">
         </div>
+
+    </section>
+    <section id="card section">
+        <div id="container">
+
+            <div class="card bg-base-100 w-150 shadow-sm">
+                <figure class="px-5 pt-10">
+                    <img src="../static/css/sellscrap.png" alt="Scrap Collection" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title text-2xl">Sell Your Scrap</h2>
+                    <p class="p-title text-2xl">Schedule doorstep pickup and sell your scrap easily for the best price.
+                    </p>
+                   <div class="card-actions">
+                        <a href="" class="btn btn-primary w-35 h-14 text-xl">
+                            Sell Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card bg-base-100 w-150 shadow-sm">
+                <figure class="px-5 pt-10">
+                    <img src="../static/css/viewrates.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title text-2xl">View Scrap Rates</h2>
+                    <p class="p-title text-2xl">Check live prices for metals, paper, e-waste, and more in real time.
+                    </p>
+                    <div class="card-actions">
+                        <a href="rates.html" class="btn btn-primary w-35 h-14 text-xl">
+                            Check Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card bg-base-100 w-150 shadow-sm">
+                <figure class="px-5 pt-10">
+                    <img src="../static/css/secondhand.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title text-2xl">Second-Hand Marketplace</h2>
+                    <p class="p-title text-2xl">Buy and sell useful second-hand items at affordable prices.
+                    </p>
+                    <div class="card-actions">
+                        <a href="" class="btn btn-primary w-34 h-14 text-xl">
+                            Explore
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
 </body>
