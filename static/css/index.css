@@ -216,6 +216,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+  background-color: #f7f9f6;
 }
 
 .hero img {
@@ -334,4 +335,10 @@ input:hover {
   color: white;
   border-color: #111111;
   cursor: pointer;
+}
+
+.foot{
+width: 100%;
+  position: absolute;
+  top: 158rem;
 }
