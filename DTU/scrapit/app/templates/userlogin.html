@@ -8,16 +8,31 @@
     <title>User Login</title>
     <link rel="stylesheet" href="../static/css/userlogin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <script>
+            alert("{{ message|escapejs }}");
+            {% if 'success' in message.tags %}
+                window.location.href = "{% url 'index' %}";
+            {% endif %}
+        </script>
+        {% endfor %}
+    </ul>
+    {% endif %}
 
     <div class="login-box">
         <div class="login-icon">🔑</div>
         <h2>Sign in with email</h2>
         <p>Make a new doc to bring your words, data, and teams together. For free</p>
 
-        <form>
-
-            <input type="email" class="input-field" placeholder="Email">
-            <input type="password" class="input-field" placeholder="Password">
+        <form action="{% url "userlogin" %}" method="POST">
+          {% csrf_token %}
+            <input type="email" name="email" id="email" class="input-field" placeholder="Email" required>
+            <input type="password" name="password" id="password" class="input-field" placeholder="Password" required>
 
             <a href="#" class="forgot">Forgot password?</a>
             <!-- <div class="g-recaptcha" data-sitekey="6Lf3DEUsAAAAAE_-3C7IPk-pbCa0y_N176bkUIog"></div> -->
@@ -52,6 +67,6 @@
     }
   </script> -->
 
-    </body>
+</body>
 
 </html>
