@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScrapKart - Turn Scrap into Cash</title>
-    <link rel="stylesheet" href="../static/css/rates.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/rates.css" %}">
 </head>
 <body>
     
@@ -98,7 +99,7 @@
                     <p>Separate your recyclable materials like paper, plastic, metal, and electronics</p>
                 </div>
                 <div class="step">
-                    <div class="step-number">2</div>
+                    <div class="step-number">2</div>    
                     <h3>Schedule Pickup</h3>
                     <p>Contact us to schedule a convenient pickup time from your location</p>
                 </div>
