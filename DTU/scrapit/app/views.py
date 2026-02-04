@@ -7,6 +7,8 @@ from .models import Signup
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .models import Pickup
+from .models import contactus
+
 
 # Create your views here.
 
@@ -80,7 +82,7 @@ def usersignup(request):
 
 
 def training(request):
-    return render(request, "training copy.html")
+    return render(request, "training.html")
 
 
 def pickup(request):
@@ -102,3 +104,42 @@ def pickup(request):
         messages.success(request, "Pickup request submitted successfully!")
         return redirect("pickup")
     return render(request, "pickup.html")
+
+
+def firstv(request):
+    return render(request, "firstv.html")
+
+
+def secondv(request):
+    return render(request, "secondv.html")
+
+
+def thirdv(request):
+    return render(request, "thirdv.html")
+
+
+def aboutus(request):
+    return render(request, "aboutus.html")
+
+
+def Contactus(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        mobile = request.POST.get("mobile")
+        email = request.POST.get("email")
+
+        contactus.objects.create(
+            name=name,
+            mobile=mobile,
+            email=email,
+        )
+
+        messages.success(
+            request, "Thank you for contacting us! We will get to touch you soon."
+        )
+        return redirect("index")
+    return render(request, "index.html")
+
+
+def secondhand(request):
+    return render(request, "secondhand.html")

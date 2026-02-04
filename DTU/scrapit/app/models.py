@@ -26,3 +26,12 @@ class Pickup(models.Model):
 
     def __str__(self):
         return f"Pickup for {self.name} on {self.date} at {self.time_slot}"
+    
+class contactus(models.Model):
+    name = models.CharField(max_length=100)
+    mobile = models.BigIntegerField()
+    email = models.EmailField()
+
+
+    def __str__(self):
+        return f"Message from {self.name} ({self.email})"
