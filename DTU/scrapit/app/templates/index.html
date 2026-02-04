@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrapit</title>
-    <link rel="stylesheet" href="../static/css/index.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/index.css" %}">
     <script src="/static/js/index.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -44,7 +45,7 @@
 
     <section id="hero section">
         <div class="hero">
-            <img src="/static/css/heroNew.png" alt="">
+            <img src="{% static "media/heroNew.png" %}" alt="">
         </div>
 
     </section>
@@ -53,7 +54,7 @@
 
             <div class="card bg-base-100 w-150 shadow-sm">
                 <figure class="px-5 pt-10">
-                    <img src="../static/css/sellscrap.png" alt="Scrap Collection" class="rounded-xl" />
+                    <img src="{% static "media/sellscrap.png" %}" alt="Scrap Collection" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
                     <h2 class="card-title text-2xl">Sell Your Scrap</h2>
@@ -70,7 +71,7 @@
 
             <div class="card bg-base-100 w-150 shadow-sm">
                 <figure class="px-5 pt-10">
-                    <img src="../static/css/viewrates.png" alt="Shoes" class="rounded-xl" />
+                    <img src="{% static "media/viewrates.png" %}" alt="Shoes" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
                     <h2 class="card-title text-2xl">View Scrap Rates</h2>
@@ -87,7 +88,7 @@
 
             <div class="card bg-base-100 w-150 shadow-sm">
                 <figure class="px-5 pt-10">
-                    <img src="../static/css/secondhand.png" alt="Shoes" class="rounded-xl" />
+                    <img src="{% static "media/secondhand.png" %}" alt="Shoes" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
                     <h2 class="card-title text-2xl">Second-Hand Marketplace</h2>

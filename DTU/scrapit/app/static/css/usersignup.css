@@ -1,0 +1,124 @@
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background: linear-gradient(to bottom, #a3d8ff, #ffffff); */
+      padding: 20px;
+    }
+
+    /* Glass container */
+    .signup-box {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 30px 25px;
+      width: 400px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .signup-box h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .signup-box p {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    /* Input fields */
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: #f8f8f8;
+      font-size: 14px;
+    }
+
+    /* Select dropdown */
+    select.input-field {
+      background: #f8f8f8;
+      cursor: pointer;
+    }
+
+    /* Button */
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #333, #000);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #444, #111);
+    }
+
+    /* Divider */
+    .divider {
+      margin: 20px 0;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      height: 1px;
+      width: 40%;
+      background: #ddd;
+      position: absolute;
+      top: 50%;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    /* Social buttons */
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .social-buttons button {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .social-buttons button:hover {
+      background: #f2f2f2;
+    }
