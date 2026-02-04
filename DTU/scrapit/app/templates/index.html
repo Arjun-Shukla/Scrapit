@@ -61,7 +61,7 @@
                     <p class="p-title text-2xl">Schedule doorstep pickup and sell your scrap easily for the best price.
                     </p>
                    <div class="card-actions">
-                        <a href="" class="btn btn-primary w-35 h-14 text-xl">
+                        <a href="{% url "pickup" %}" class="btn btn-primary w-35 h-14 text-xl">
                             Sell Now
                         </a>
                     </div>
@@ -105,6 +105,33 @@
 
 
     </section>
+
+    <section id="contact section">
+
+        <div id="contact-container">
+            <span id="contacthead">Contact Us</span>
+            <form action="data.js">
+
+                <!-- <span class="inputnames">name</span> -->
+
+                <input type="text" name="name" class="input" placeholder="Name">
+
+                <input type="number" name="number" class="input" placeholder="Mob Number">
+
+                <input type="email" name="email" class="input" placeholder="Email">
+
+                <input type="reset" name="reset" class="lowerinput">
+
+                <input type="submit" name="submit" class="lowerinput">
+            </form>
+        </div>
+
+
+
+
+
+    </section>
+
 
 </body>
 

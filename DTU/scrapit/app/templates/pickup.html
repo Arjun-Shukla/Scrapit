@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pickup</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+       <link rel="stylesheet" href="../static/css/pickup.css">
+</head>
+<body>
+
+     {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <script>
+            alert("{{ message|escapejs }}");
+            {% if 'success' in message.tags %}
+                window.location.href = "{% url 'index' %}";
+            {% endif %}
+        </script>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <div class="container">
+        <span class="pickup">Book Your Slot</span>
+        
+    <form action="{% url "pickup" %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" id="name" class="name" placeholder="Name">
+        <input type="text" name="address" id="address" class="name" placeholder="Address">
+        <input type="date" name="date" id="date" class="name" placeholder="date">
+        <select name="time_slot" id="time_slot">
+            <option value="" disabled selected>Select Time Slot</option>
+            <option value="9:00 - 11:00 AM">9:00 - 11:00 AM</option>
+            <option value="12:00 - 1:30 AM">12:00 - 1:30 AM</option>
+            <option value="3:00 - 5:00 PM">3:00 - 5:00 PM</option>
+            <option value="6:00 - 8:00 PM">6:00 - 8:00 PM</option>
+        </select>
+
+        <select name="items" id="items">
+            <option value="" disabled selected>Select Item Type</option>
+            <option value="paper">Paper</option>
+            <option value="plastic">Plastic</option>
+            <option value="cardboard">Cardboard</option>
+            <option value="metal">Metal</option>
+            <option value="electronics">Electronics</option>
+        </select>
+
+        </div>
+    
+    
+        <button type="submit" class="req">Request Pickup
+
+    </form>
+
+        <script src="../static/js/pickup.js" defer></script>
+
+</body>
+</html>

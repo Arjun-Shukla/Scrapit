@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from .models import Signup
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from .models import Pickup
 
 # Create your views here.
 
@@ -76,3 +77,28 @@ def usersignup(request):
             return redirect("userlogin")
 
     return render(request, "usersignup.html")
+
+
+def training(request):
+    return render(request, "training copy.html")
+
+
+def pickup(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        address = request.POST.get("address")
+        date = request.POST.get("date")
+        time_slot = request.POST.get("time_slot")
+        items = request.POST.get("items")
+
+        Pickup.objects.create(
+            name=name,
+            address=address,
+            date=date,
+            time_slot=time_slot,
+            items=items,
+        )
+
+        messages.success(request, "Pickup request submitted successfully!")
+        return redirect("pickup")
+    return render(request, "pickup.html")
