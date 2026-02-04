@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Email</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      p {
+        color: #555;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+      }
+
+      small {
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Welcome, {{ username }}👋</h2>
+      <p>Thank You for choosing Scrapit service.</p>
+      <p>We are always with you.😊</p>
+      <hr />
+      <small>This is automated mail please do not reply.</small>
+    </div>
+  </body>
+</html>
