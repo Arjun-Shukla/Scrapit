@@ -11,6 +11,13 @@
 </head>
 
 <body>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <script>alert("{{ message|escapejs }}");</script>
+        {% endfor %}
+    </ul>
+    {% endif %}
 
   <div class="signup-box">
     <h2>Create an Account</h2>
@@ -46,6 +53,14 @@
       <button><i class="fa-solid fa-mobile"></i> Mobile</button>
     </div>
   </div>
+
+  {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <script>alert("{{ message|escapejs }}");</script>
+    {% endfor %}
+  </ul>
+{% endif %}
 
 </body>
 
