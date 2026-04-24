@@ -2,7 +2,7 @@
 
 ### Hassle-Free Scrap Selling Platform
 
-ScrapIt is a web-based platform designed to **simplify scrap selling and collection** by connecting users with nearby scrap buyers. It streamlines the entire process - from booking a pickup to managing interactions - through a clean and user-friendly interface.
+ScrapIt is a web-based platform designed to **simplify scrap selling and collection** by connecting users with nearby scrap buyers. It streamlines the entire process - from booking a pickup to managing interactions - through a clean and user-friendly interfaces.
 
 ---
 
